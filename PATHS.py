@@ -1,9 +1,9 @@
 NAVBAR_PATHS = {
     'HOME':'home',
     'ML DATASET EXPLORER': 'MLDatasetExplorer',
-    'AUTO ML REGRESSION APP': 'AutoMlRegressionApp',
-    'AUTO ML CLASSIFICATION APP': 'AutoMlClassificationApp',
-    'THE MACHINE LEARNING HYPERPARAMETER OPTIMIZATION APP': 'TheMachineLearningHyperparameterOptimizationApp'
+    'AUTO ML REGRESSION': 'AutoMlRegressionApp',
+    'AUTO ML CLASSIFICATION': 'AutoMlClassificationApp',
+    'THE MACHINE LEARNING HYPERPARAMETER OPTIMIZATION': 'TheMachineLearningHyperparameterOptimizationApp'
 }
 
 SETTINGS = {

@@ -117,13 +117,10 @@ def load_view():
 
     # Customizable Plot
 
-    if st.checkbox("Customizable Plot"):
-        st.subheader('Customizable Plot')
-        all_columns_names = df.columns.tolist()
-        type_of_plots = st.selectbox('Select Type of Plot',["area","bar","line","hist","box","kde"])
-        selected_columns_names = st.multiselect("Select columns to plot",all_columns_names)
-    else:
-        pass
+    st.subheader('Customizable Plot')
+    all_columns_names = df.columns.tolist()
+    type_of_plots = st.selectbox('Select Type of Plot',["area","bar","line","hist","box","kde"])
+    selected_columns_names = st.multiselect("Select columns to plot",all_columns_names)
 
 
     if st.button("Generate Plot"):

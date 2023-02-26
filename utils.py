@@ -38,12 +38,6 @@ def navbar_component():
                 </a>
                 {navbar_items}
                 </ul>
-                <div class="dropdown" id="settingsDropDown">
-                    <img class="dropbtn" src="data:image/png;base64, {image_as_base64.decode("utf-8")}"/>
-                    <div id="myDropdown" class="dropdown-content">
-                        {settings_items}
-                    </div>
-                </div>
             </nav>
             '''
     st.markdown(component, unsafe_allow_html=True)
@@ -81,3 +75,11 @@ def navbar_component():
     </script>
     '''
     html(js)
+
+
+# <div class="dropdown" id="settingsDropDown">
+#     <img class="dropbtn" src="data:image/png;base64, {image_as_base64.decode("utf-8")}"/>
+#     <div id="myDropdown" class="dropdown-content">
+#         {settings_items}
+#     </div>
+# </div>
