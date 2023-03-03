@@ -2,7 +2,7 @@ import streamlit as st
 import utils as utl
 from views import home, MLDatasetExplorer, AutoMlRegressionApp, AutoMlClassificationApp, TheMachineLearningHyperparameterOptimizationApp, options,configuration
 
-st.set_page_config(layout="wide", page_title='Navbar sample')
+st.set_page_config(layout="wide", page_title='Oil and Gas Exploration')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 utl.inject_custom_css()
 utl.navbar_component()

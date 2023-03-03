@@ -24,6 +24,16 @@ def load_view():
     In this implementation, the *RandomForestRegressor()* function is used in this app for build a regression model using the **Random Forest** algorithm.
     """)
 
+    st.markdown("""
+    <style>
+      section[data-testid="stSidebar"][aria-expanded="true"]{
+        padding-top: 50px !important;
+      }
+      section[data-testid="stSidebar"][aria-expanded="false"]{
+        padding-top: 50px !important;
+      }
+    </style>""", unsafe_allow_html=True)
+
     #---------------------------------#
     # Sidebar - Collects user input features into dataframe
     st.sidebar.header('Upload your CSV data')

@@ -18,6 +18,16 @@ def load_view():
     st.title("ML Dataset Explorer")
     st.subheader("Simple Data Science Explorer with Streamlit")
     
+    st.markdown("""
+    <style>
+      section[data-testid="stSidebar"][aria-expanded="true"]{
+        padding-top: 50px !important;
+      }
+      section[data-testid="stSidebar"][aria-expanded="false"]{
+        padding-top: 50px !important;
+      }
+    </style>""", unsafe_allow_html=True)
+
     with st.sidebar.header('1. Upload your CSV data'):
         uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
     # def file_selector(folder_path='./apps/datasets'): # current

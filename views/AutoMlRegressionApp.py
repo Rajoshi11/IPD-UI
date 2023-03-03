@@ -135,6 +135,16 @@ def load_view():
         # Auto Ml Regression App 
         """)
 
+        st.markdown("""
+        <style>
+        section[data-testid="stSidebar"][aria-expanded="true"]{
+            padding-top: 50px !important;
+        }
+        section[data-testid="stSidebar"][aria-expanded="false"]{
+            padding-top: 50px !important;
+        }
+        </style>""", unsafe_allow_html=True)
+
         # Sidebar - Collects user input features into dataframe
         with st.sidebar.header('1. Upload your CSV data'):
             uploaded_file = st.sidebar.file_uploader("please Upload your input CSV file", type=["csv"])
