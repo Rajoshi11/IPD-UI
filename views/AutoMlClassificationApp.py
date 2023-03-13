@@ -15,11 +15,16 @@ import io
 import numpy as np
 from streamlit_option_menu import option_menu
 import streamlit.components.v1 as components
+from sklearn.preprocessing import LabelEncoder
     
 def load_view():
     # Page expands to full width
     # st.set_page_config(page_title='Auto Ml Regression and Classification App',layout='wide')
         def build_model(df):
+            le = LabelEncoder()
+            df['Presence'] = le.fit_transform(df['Presence'])
+            df['Well Name'] = le.fit_transform(df['Well Name'])
+            df['Formation'] = le.fit_transform(df['Formation'])
             X = df.iloc[:,:-1] # Features variables
             Y = df.iloc[:,-1]  # Target variable
 

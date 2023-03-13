@@ -14,8 +14,8 @@ import seaborn as sns
 
 def load_view():
     st.set_option('deprecation.showPyplotGlobalUse', False)
-    """ML Dataset Explorer"""
-    st.title("ML Dataset Explorer")
+    """EDA toolkit"""
+    st.title("Exploratory Data Analysis")
     st.subheader("Simple Data Science Explorer with Streamlit")
     
     st.markdown("""
@@ -126,11 +126,11 @@ def load_view():
             st.pyplot()
 
     # Customizable Plot
-
-    st.subheader('Customizable Plot')
-    all_columns_names = df.columns.tolist()
-    type_of_plots = st.selectbox('Select Type of Plot',["area","bar","line","hist","box","kde"])
-    selected_columns_names = st.multiselect("Select columns to plot",all_columns_names)
+    if st.checkbox("Customize Plot"):
+        st.subheader('Customizable Plot')
+        all_columns_names = df.columns.tolist()
+        type_of_plots = st.selectbox('Select Type of Plot',["area","bar","line","hist","box","kde"])
+        selected_columns_names = st.multiselect("Select columns to plot",all_columns_names)
 
 
     if st.button("Generate Plot"):
