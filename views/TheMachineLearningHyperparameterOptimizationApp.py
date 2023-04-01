@@ -9,8 +9,10 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import GridSearchCV
 from sklearn.datasets import load_diabetes
-    
+from sklearn.preprocessing import LabelEncoder
+
 def load_view():
+    
     #---------------------------------#
     # Page layout
     ## Page expands to full width
@@ -88,26 +90,29 @@ def load_view():
     def build_model(df):
         # X = df.iloc[:,2:-1] # Using all column except for the last column as X
         # Y = df.iloc[:,9] # Selecting the last column as Y
+        le = LabelEncoder()
+        df['Presence'] = le.fit_transform(df['Presence'])
+        df['Well Name'] = le.fit_transform(df['Well Name'])
+        df['Formation'] = le.fit_transform(df['Formation'])
         X = df.iloc[:,:-1].values
         Y = df.iloc[:,-1].values
         from sklearn.impute import SimpleImputer
         imputer = SimpleImputer(missing_values=np.nan,strategy="mean")
-        imputer.fit(X[:,1:-1])
-        X[:,1:-1] = imputer.transform(X[:,1:-1])
-        from sklearn.compose import ColumnTransformer
-        from sklearn.preprocessing import OneHotEncoder
-        ct = ColumnTransformer(transformers=[("encoder",OneHotEncoder(),[0])],remainder="passthrough")
-        X = np.array(ct.fit_transform(X))
-        from sklearn.preprocessing import LabelEncoder
-        le = LabelEncoder()
-        Y = le.fit_transform(Y)
+        imputer.fit(X[:,:-1])
+        X[:,:-1] = imputer.transform(X[:,:-1])
+        # from sklearn.compose import ColumnTransformer
+        # from sklearn.preprocessing import OneHotEncoder
+        # ct = ColumnTransformer(transformers=[("encoder",OneHotEncoder(),[0])],remainder="passthrough")
+        # X = np.array(ct.fit_transform(X))
+        # from sklearn.preprocessing import LabelEncoder
+        
         st.markdown('A model is being built to predict the following **Y** variable:')
         # st.info(Y.name)
 
         # Data splitting
         X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=split_size)
-        #X_train.shape, Y_train.shape
-        #X_test.shape, Y_test.shape
+        # X_train.shape, Y_train.shape
+        # X_test.shape, Y_test.shape
 
         rf = RandomForestRegressor(n_estimators=parameter_n_estimators,
             random_state=parameter_random_state,

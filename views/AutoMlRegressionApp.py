@@ -19,19 +19,23 @@ def load_view():
     # Page expands to full width
     # st.set_page_config(page_title='Auto Ml Regression and Classification App',layout='wide')
         def build_model(df):
+            le = LabelEncoder()
+            df['Presence'] = le.fit_transform(df['Presence'])
+            df['Well Name'] = le.fit_transform(df['Well Name'])
+            df['Formation'] = le.fit_transform(df['Formation'])
             X = df.iloc[:,:-1] # Features variables
             Y = df.iloc[:,-1]  # Target variable
             # from sklearn.impute import SimpleImputer
             # imputer = SimpleImputer(missing_values=np.nan,strategy="mean")
             # imputer.fit(X[:,1:-1])
             # X[:,1:-1] = imputer.transform(X[:,1:-1])
-            from sklearn.compose import ColumnTransformer
-            from sklearn.preprocessing import OneHotEncoder
-            ct = ColumnTransformer(transformers=[("encoder",OneHotEncoder(),[0])],remainder="passthrough")
-            X = np.array(ct.fit_transform(X))
-            from sklearn.preprocessing import LabelEncoder
-            le = LabelEncoder()
-            Y = le.fit_transform(Y)
+            # from sklearn.compose import ColumnTransformer
+            # from sklearn.preprocessing import OneHotEncoder
+            # ct = ColumnTransformer(transformers=[("encoder",OneHotEncoder(),[0])],remainder="passthrough")
+            # X = np.array(ct.fit_transform(X))
+
+            # le = LabelEncoder()
+            # Y = le.fit_transform(Y)
             st.markdown('A model is being built to predict the following **Y** variable:')
             # Dimensions of dataset
             st.markdown('**1.2. Dataset dimension**')

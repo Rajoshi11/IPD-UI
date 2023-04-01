@@ -1,6 +1,6 @@
 import streamlit as st
 import utils as utl
-from views import home, MLDatasetExplorer, AutoMlRegressionApp, AutoMlClassificationApp, TheMachineLearningHyperparameterOptimizationApp, options,configuration
+from views import EDA, home, AutoMlRegressionApp, AutoMlClassificationApp, TheMachineLearningHyperparameterOptimizationApp, options,configuration
 
 st.set_page_config(layout="wide", page_title='Oil and Gas Exploration')
 st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -11,8 +11,8 @@ def navigation():
     route = utl.get_current_route()
     if route == "home":
         home.load_view()
-    elif route == "MLDatasetExplorer":
-        MLDatasetExplorer.load_view()
+    elif route == "EDA":
+        EDA.load_view()
     elif route == "AutoMlRegressionApp":
         AutoMlRegressionApp.load_view()
     elif route == "AutoMlClassificationApp":
