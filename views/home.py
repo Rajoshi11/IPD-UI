@@ -16,13 +16,6 @@ from PIL import Image
 def load_view():
     st.set_option('deprecation.showPyplotGlobalUse', False)
 
-    # page_bg_img = f"""
-    # <style>
-    # [data-testid="stAppViewContainer"] > .main {{
-    # background-image: url("https://unsplash.com/photos/XLFu0PM5Qsg");
-    # }}
-    # """
-    # st.markdown(page_bg_img, unsafe_allow_html=True)
     col1, col2, col3 = st.columns((2,7,1))
     with col2:
         st.title("APPLICATION OF ML IN FACIES CLASSIFICATION")
@@ -39,7 +32,7 @@ def load_view():
       .css-10zg0a4{
         padding-top: 50px !important;
       }
-    </style>""", unsa fe_allow_html=True)
+    </style>""", unsafe_allow_html=True)
 
     col1, col2 = st.columns((2,3))
     with col1:

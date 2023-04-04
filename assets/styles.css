@@ -6,7 +6,16 @@
     z-index: 99999999999999999999;
     left: 0rem;
     top: 2px;
-    height: 50px;
+    height: 45px;
+}
+
+.css-fg4pbf{
+    background-image: url("https://images.unsplash.com/photo-1513295202663-54cd69dd2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8b2lsJTIwYW5kJTIwZ2FzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .navitem{
@@ -23,7 +32,7 @@
 
 .navitem:hover{
     background-color: #333;
-    height: 55px !important;
+    height: 45px !important;
 }
 
 
