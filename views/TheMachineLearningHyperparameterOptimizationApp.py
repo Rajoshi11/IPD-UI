@@ -25,7 +25,7 @@ def load_view():
     **(Regression Edition)**
     In this implementation, the *RandomForestRegressor()* function is used in this app for build a regression model using the **Random Forest** algorithm.
     """)
-
+    
     st.markdown("""
     <style>
       section[data-testid="stSidebar"][aria-expanded="true"]{
@@ -35,8 +35,11 @@ def load_view():
         padding-top: 50px !important;
       }
       .css-10zg0a4{
-        padding-top: 50px !important;
-      }
+            padding-top: 50px !important;
+        }
+      .css-1544g2n{
+            background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
+            background-size: cover;}
     </style>""", unsafe_allow_html=True)
 
     #---------------------------------#

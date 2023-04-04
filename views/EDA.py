@@ -20,15 +20,19 @@ def load_view():
     
     st.markdown("""
     <style>
-      section[data-testid="stSidebar"][aria-expanded="true"]{
-        padding-top: 50px !important;
-      }
-      section[data-testid="stSidebar"][aria-expanded="false"]{
-        padding-top: 50px !important;
-      }
-      .css-10zg0a4{
-        padding-top: 50px !important;
-      }      
+        section[data-testid="stSidebar"][aria-expanded="true"]{
+            padding-top: 50px !important;
+        }
+        section[data-testid="stSidebar"][aria-expanded="false"]{
+            padding-top: 50px !important;
+        }
+        .css-10zg0a4{
+            padding-top: 50px !important;
+        }
+        .css-6qob1r{
+            background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
+            background-size: cover;
+            }
     </style>""", unsafe_allow_html=True)
 
     with st.sidebar.header('1. Upload your CSV data'):

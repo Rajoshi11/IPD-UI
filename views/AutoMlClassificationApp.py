@@ -130,6 +130,9 @@ def load_view():
         .css-10zg0a4{
             padding-top: 50px !important;
         }
+        .css-1544g2n{    
+            background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
+            background-size: cover;}
         </style>""", unsafe_allow_html=True)
 
         # Sidebar - Collects user input features into dataframe

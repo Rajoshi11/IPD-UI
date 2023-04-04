@@ -2,26 +2,20 @@
     font-family: 'Trebuchet MS', sans-serif;
     position: fixed;
     width: 97%;
-    background: #0e1117;
+    background: #042647;
     z-index: 99999999999999999999;
     left: 0rem;
-    top: 2px;
-    height: 45px;
-}
-
-.css-fg4pbf{
-    background-image: url("https://images.unsplash.com/photo-1513295202663-54cd69dd2b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8b2lsJTIwYW5kJTIwZ2FzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
-    height: 800px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    right: 5rem;
+    top: 0px;
+    height: 55px;
+    outline-style:solid;
+    outline-color: #3AAFA9;
 }
 
 .navitem{
     float: right;
     display: block;
-    color: #f2f2f2 !important;
+    color: #3AAFA9 !important;
     text-align: center;
     padding: 15px 20px;
     text-decoration: none !important;
@@ -31,8 +25,8 @@
 }
 
 .navitem:hover{
-    background-color: #333;
-    height: 45px !important;
+    background-color: #def2f1;
+    height: 55px !important;
 }
 
 
@@ -97,8 +91,8 @@
 }
 
 .dropbtn:hover{
-    background-color: rgba(221, 221, 221, 0.233);
-    background: rgba(221, 221, 221, 0.233);
+    background-color: #def2f1;
+    background: #def2f1;
 }
 
 .dropdown a:hover {background-color: rgba(221, 221, 221, 0.233);}
@@ -106,3 +100,4 @@
 iframe{
     height: 0rem;
 }
+
