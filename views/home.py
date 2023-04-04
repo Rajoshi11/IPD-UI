@@ -36,7 +36,10 @@ def load_view():
       section[data-testid="stSidebar"][aria-expanded="false"]{
         padding-top: 50px !important;
       }
-    </style>""", unsafe_allow_html=True)
+      .css-10zg0a4{
+        padding-top: 50px !important;
+      }
+    </style>""", unsa fe_allow_html=True)
 
     col1, col2 = st.columns((2,3))
     with col1:

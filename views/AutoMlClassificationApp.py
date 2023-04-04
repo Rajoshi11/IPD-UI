@@ -127,6 +127,9 @@ def load_view():
         section[data-testid="stSidebar"][aria-expanded="false"]{
             padding-top: 50px !important;
         }
+        .css-10zg0a4{
+            padding-top: 50px !important;
+        }
         </style>""", unsafe_allow_html=True)
 
         # Sidebar - Collects user input features into dataframe
