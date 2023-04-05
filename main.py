@@ -35,14 +35,6 @@ def navigation():
         AutoMlClassificationApp.load_view()
     elif route == "TheMachineLearningHyperparameterOptimizationApp":
         TheMachineLearningHyperparameterOptimizationApp.load_view()
-<<<<<<< HEAD
-    elif route == "options":
-        options.load_view()
-    elif route == "configuration":
-        configuration.load_view()
-    elif route == None:
-       home.load_view()
-=======
     elif route == "Training":
         training.load_view()
     elif route == "Prediction":
@@ -51,6 +43,5 @@ def navigation():
        home.load_view()
 
 
->>>>>>> 0b22d8ca9be0a434507f961cd3c6f54191ee67f1
         
 navigation()
