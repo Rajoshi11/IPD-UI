@@ -7,7 +7,7 @@
     left: 0rem;
     right: 5rem;
     top: 0px;
-    height: 55px;
+    height: 45px;
     outline-style:solid;
     outline-color: #3AAFA9;
 }
@@ -26,7 +26,7 @@
 
 .navitem:hover{
     background-color: #def2f1;
-    height: 55px !important;
+    height: 45px !important;
 }
 
 
