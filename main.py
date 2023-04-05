@@ -8,17 +8,17 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 utl.inject_custom_css()
 utl.navbar_component()
 
-page_bg_img = f"""
-    <style>
-       [data-testid="stAppViewContainer"] > .main {{
-          background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
-         background-size: cover; }}
-     [data-testid = "stcss-6qob1r] > .main {{
-        background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
-       background-size: cover;
-  }}    
-"""
-st.markdown(page_bg_img, unsafe_allow_html=True)
+#page_bg_img = f"""
+#    <style>
+ #      [data-testid="stAppViewContainer"] > .main {{
+  #        background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
+   #      background-size: cover; }}
+    # [data-testid = "stcss-6qob1r] > .main {{
+     #   background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
+    #   background-size: cover;
+  #}}    
+#"""
+#st.markdown(page_bg_img, unsafe_allow_html=True)'''
 
 
 

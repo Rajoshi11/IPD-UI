@@ -23,10 +23,6 @@ def load_view():
         .css-1rs6os{
         padding-top: 50px !important;
         }
-        .css-6qob1r{
-            background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
-            background-size: cover;
-            }
     </style>""", unsafe_allow_html=True)
     uploaded_file = st.sidebar.file_uploader("Choose a file")
 

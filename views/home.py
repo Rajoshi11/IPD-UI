@@ -3,14 +3,14 @@ import streamlit as st
 #utl.inject_custom_css()
 def load_view():
     #st.markdown("<span style = 'color:#0c243c; font-family:sans-serif; font-size:35px;'>Predictive Analysis of Oil and Gas using Well Log Data</span>",unsafe_allow_html=True)
-    page_bg_img = f"""
+    '''page_bg_img = f"""
         <style>
             [data-testid="stAppViewContainer"] > .main {{
                 background-image: url("https://wallpaperaccess.com/full/2941149.jpg");  
                 background-size:cover}}"""
     st.markdown(page_bg_img, unsafe_allow_html=True)
     # Define the page title and favicon
-    #st.set_page_config(page_title="Oil and Gas Exploration", page_icon=":oil_drum:")
+    #st.set_page_config(page_title="Oil and Gas Exploration", page_icon=":oil_drum:")'''
 
     # Set up the layout
     st.markdown("<span style = 'font-family:sans-serif; font-size:35px;'>Predictive Analysis of Oil and Gas using Well Log Data</span>",unsafe_allow_html=True)

@@ -22,10 +22,6 @@ def load_view():
             .css-10zg0a4{
                 padding-top: 50px !important;
             }
-            .css-6qob1r{
-                background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
-                background-size: cover;
-                }
         </style>""", unsafe_allow_html=True)
     # Set up the layout
     st.title("Exploratory Data Analysis of Oil and Gas Presence")

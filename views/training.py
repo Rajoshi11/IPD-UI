@@ -13,6 +13,7 @@ def load_view():
     # Define the Streamlit app
         # Add a file upload widget to the app
     st.subheader('1. Dataset')
+    
     st.markdown("""
     <style>
         section[data-testid="stSidebar"][aria-expanded="true"]{
@@ -27,10 +28,6 @@ def load_view():
         .css-10zg0a4{
             padding-top: 50px !important;
         }
-        .css-6qob1r{
-            background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
-            background-size: cover;
-            }
     </style>""", unsafe_allow_html=True)
     uploaded_file = st.sidebar.file_uploader("Choose a file")
 
@@ -68,11 +65,12 @@ def load_view():
 
             # Read the CSV file into a Pandas DataFrame
             df = pd.read_csv(csv_filename)
-
+            
         # If the file is not in a supported format
         else:
             st.error("Unsupported file format")
         st.header("Uploaded Dataset")
+        st.markdown('**1.1. Glimpse of dataset**')
         st.write(df)
         le = LabelEncoder()
         df['Presence'] = le.fit_transform(df['Presence'])
