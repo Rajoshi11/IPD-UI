@@ -6,7 +6,7 @@ import pickle
 import numpy as np
 
 def load_view():
-    st.subheader('1. Dataset')
+    st.header('1. Dataset')
     # Define the Streamlit app
     # Add a file upload widget to the app
     st.markdown("""
@@ -66,15 +66,17 @@ def load_view():
             st.error("Unsupported file format")
 
         # Display the preprocessed data
-        st.header("Uploaded Dataset")
+        st.subheader("Uploaded Dataset")
         st.write(df)
         le = LabelEncoder()
         df['Well Name'] = le.fit_transform(df['Well Name'])
         df['Formation'] = le.fit_transform(df['Formation'])
+        st.subheader("Upload the pickle file of trained model")
         model_file = st.file_uploader("Upload a trained model (pickle file)", type=["pkl"])
         if model_file is not None:
             model = pickle.load(model_file)
             predictions = model.predict(df)
+            st.subheader("Predicted (encoded) target variable")
             st.write(predictions)
             # define the mapping between numbers and categories
             mapping = {0: "High", 1: "Low", 2: "Medium"}
@@ -84,10 +86,7 @@ def load_view():
 
             # use the map() method to apply the mapping to the series
             categories = series.map(mapping)
-
+            st.subheader("Predicted Presence of Oil and gas")
             # print the resulting categories
             st.write(categories)
-
-
-
-
+        
