@@ -1,6 +1,6 @@
 NAVBAR_PATHS = {
-    'Prediction':'Prediction',
-    'Training': 'Training',
+    'PREDICTION':'PREDICTION',
+    'TRAINING': 'TRAINING',
     'ML HYPERPARAMETER OPTIMIZATION': 'TheMachineLearningHyperparameterOptimizationApp',
     'AUTO ML CLASSIFICATION': 'AutoMlClassificationApp',
     'AUTO ML REGRESSION': 'AutoMlRegressionApp',
