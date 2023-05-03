@@ -11,7 +11,7 @@ import pickle
 from pathlib import Path
 import streamlit_authenticator as stauth
 
-# st.set_page_config(layout="wide", page_title='Oil and Gas Exploration')
+st.set_page_config(layout="wide", page_title='Oil and Gas Exploration')
 # st.markdown(
 #     """
 #     <style>
