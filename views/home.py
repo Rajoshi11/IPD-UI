@@ -1,6 +1,5 @@
 import streamlit as st
-#import utils as utl
-#utl.inject_custom_css()
+
 def load_view():
     #st.markdown("<span style = 'color:#0c243c; font-family:sans-serif; font-size:35px;'>Predictive Analysis of Oil and Gas using Well Log Data</span>",unsafe_allow_html=True)
     '''page_bg_img = f"""

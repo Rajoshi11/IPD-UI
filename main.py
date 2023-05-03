@@ -1,18 +1,30 @@
 import streamlit as st
 import utils as utl
-from views import EDA, home, AutoMlRegressionApp, AutoMlClassificationApp, TheMachineLearningHyperparameterOptimizationApp, training , prediction
+from views import EDA, home, AutoMlRegressionApp, AutoMlClassificationApp, TheMachineLearningHyperparameterOptimizationApp
 import json
 import requests
 from PIL import Image
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
 import time
+import pickle
+from pathlib import Path
+import streamlit_authenticator as stauth
 
-st.set_page_config(layout="wide", page_title='Oil and Gas Exploration')
+# st.set_page_config(layout="wide", page_title='Oil and Gas Exploration')
+# st.markdown(
+#     """
+#     <style>
+#     body {
+#         background-color: #042647;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
-def load_lottiefile(filepath: str):
-    with open(filepath, "r") as f:
-        return json.load(f)
+
+
 
 
 def load_lottieurl(url: str):
@@ -35,13 +47,13 @@ utl.navbar_component()
 
 #page_bg_img = f"""
 #    <style>
- #      [data-testid="stAppViewContainer"] > .main {{
-  #        background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
-   #      background-size: cover; }}
+#      [data-testid="stAppViewContainer"] > .main {{
+#        background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
+#      background-size: cover; }}
     # [data-testid = "stcss-6qob1r] > .main {{
-     #   background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
+    #   background-image: url("https://wallpaperaccess.com/full/2941149.jpg");
     #   background-size: cover;
-  #}}    
+#}}    
 #"""
 #st.markdown(page_bg_img, unsafe_allow_html=True)'''
 
@@ -57,12 +69,8 @@ def navigation():
         AutoMlClassificationApp.load_view()
     elif route == "TheMachineLearningHyperparameterOptimizationApp":
         TheMachineLearningHyperparameterOptimizationApp.load_view()
-    elif route == "Training":
-        training.load_view()
-    elif route == "Prediction":
-        prediction.load_view() 
     elif route == None:
-       home.load_view()
+        home.load_view()
 
 
         

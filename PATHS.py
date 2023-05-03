@@ -1,11 +1,11 @@
 NAVBAR_PATHS = {
-    'PREDICTION':'Prediction',
-    'TRAINING': 'Training',
+    # 'PREDICTION':'Prediction',
+    # 'TRAINING': 'Training',
     'ML HYPERPARAMETER OPTIMIZATION': 'TheMachineLearningHyperparameterOptimizationApp',
     'AUTO ML CLASSIFICATION': 'AutoMlClassificationApp',
     'AUTO ML REGRESSION': 'AutoMlRegressionApp',
     'EDA': 'EDA',
-    'HOME':'home'
+    'HOME':'home',
 }
 
 SETTINGS = {
